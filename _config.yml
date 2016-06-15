@@ -14,3 +14,13 @@ zhihu_username: philowong
 paginate: 8
 
 timezone: Asia/Shanghai
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "post"
+    values:
+      layout: "post"
+      author: "Philowong"
+      header-img: "img/green.jpg"
