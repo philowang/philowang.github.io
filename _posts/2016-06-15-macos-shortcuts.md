@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MacOS Shortcuts
+title: macOS Shortcuts
 date: 2016-06-15
 ---
 
