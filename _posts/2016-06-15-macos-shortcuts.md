@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: macOS Shortcuts
 date: 2016-06-15
 ---

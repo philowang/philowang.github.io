@@ -1,1 +1,16 @@
+title: Philo's Blog
+header-img: "img/green.jpg"
 baseurl: ""
+url: "philowong"
+
+owner:
+  name: "PhiloWong"
+  email: yqw535@gmail.com
+
+github_username: philowang
+twitter_username: yuanqun
+zhihu_username: philowong
+
+paginate: 8
+
+timezone: Asia/Shanghai
