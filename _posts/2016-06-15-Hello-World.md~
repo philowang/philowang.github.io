@@ -1,0 +1,8 @@
+---
+layout: default
+title: Hello, World!
+date: 2016-06-13
+---
+<h2>{{ page.title }}</h2>
+<p>My first article!</p>
+<p>{{ page.date | date_to_string }}</p>
