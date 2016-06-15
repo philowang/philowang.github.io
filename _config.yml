@@ -22,5 +22,5 @@ defaults:
       type: "post"
     values:
       layout: "post"
-      author: "Philowong"
+      author: "PhiloWong"
       header-img: "img/green.jpg"
