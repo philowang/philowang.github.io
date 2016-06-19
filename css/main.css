@@ -62,7 +62,7 @@ code {
 a {
     border-bottom: 1px dashed Red;
     color: black;
-    cursor: crosshair;
+    cursor: pointer;
     padding: 1px;
     text-decoration: none;
 }
