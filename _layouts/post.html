@@ -3,20 +3,36 @@ layout: default
 ---
 
 <!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+		}
+</style>
 <header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
+                    <div class="Tags">
+                        {% for tag in page.tags %}
+                        <a class="tag" href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
                     <h1>{{ page.title }}</h1>
                     {% if page.subtitle %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
                 </div>
+            </div>
+        </div>
+    </div>
 </header>
-
-
-
 
 <!-- Post Content -->
 <article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+
                 {{ content }}
 
                 <hr>
@@ -24,36 +40,31 @@ layout: default
                 <ul class="pager">
                     {% if page.previous.url %}
                     <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+					<a href="{{ page.previous.url | prepend: site.baseurl | 
+					    replace: '//', '/' }}" data-toggle="tooltip" 
+					    data-placement="top" title="{{page.previous.title}}">&larr;
+					    Previous Post</a>
                     </li>
                     {% endif %}
+
                     {% if page.next.url %}
                     <li class="next">
-                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+					<a href="{{ page.next.url | prepend: site.baseurl | 
+						replace: '//', '/' }}" data-toggle="tooltip" 
+						data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
                     </li>
                     {% endif %}
                 </ul>
+            </div>
+        </div>
+    </div>
 </article>
 
-
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
 <script>
     async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
         anchors.options = {
           visible: 'hover',
+          placement: 'left',
         };
         anchors.add().remove('.intro-header h1').remove('.subheading');
     })
@@ -62,12 +73,13 @@ layout: default
     /* place left on bigger screen */
     @media all and (min-width: 800px) {
         .anchorjs-link{
-		  	transition: all .25s linear;
             position: absolute;
             left: -0.75em;
             font-size: 1.1em;
             margin-top : -0.1em;
+		    transition: all .25s linear;
         }
+
 	  *:hover > .anchorjs-link {
 	    margin-left: -1.125em !important;
 	}
