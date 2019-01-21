@@ -7,10 +7,6 @@ owner:
   name: "PhiloWong"
   email: yqw535@gmail.com
 
-github_username: philowang
-twitter_username: yuanqun
-zhihu_username: philowong
-
 paginate: 8
 
 timezone: Asia/Shanghai
@@ -23,4 +19,5 @@ defaults:
     values:
       layout: "post"
       author: "PhiloWong"
-      header-img: "img/green.jpg"
+
+gems: [jekyll-paginate]
